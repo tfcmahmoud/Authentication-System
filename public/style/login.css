@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Tauri&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    position: relative; /* Set position to relative */
+}
+
+nav {
+    display: flex;
+    background-color: #333;
+    width: 100%;
+    height: 48px;
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Position at the top */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    height: 55px;
+    font-size: 16px;
+    transition: background-color 0.5s ease
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px 15px;
+}
+
+nav ul li a.active {
+    background-color: #4caf50;
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.navbar-text {
+    font-family: "Tauri", sans-serif;
+    font-size: 24px; /* Adjust font size as needed */
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.navbar-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+#c {
+    color: #4caf50;
+}

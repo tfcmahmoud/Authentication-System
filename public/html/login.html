@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <nav>
+        
+        <ul>
+            <li><a href="#" id="loginLink" class="active">Login</a></li>
+            <li><a href="#" id="signupLink">Signup</a></li>
+            <li><a href="#" id="forgotPasswordLink">Forgot Password</a></li>
+        </ul>
+        <div class="navbar-text"><a href="/"><span id="c">27</span> Solutions</a></div>
+    </nav>
+
+    <div id="loginForm" class="form">
+        <form id="loginFormElement">
+            <h1>Login</h1>
+            <input type="text" name="username" id="loginUsername" placeholder="Username / Email" required><br>
+            <input type="password" name="password" id="loginPassword" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+            <div id="loginError" class="error"></div>
+        </form>
+    </div>
+
+    <div id="signupForm" class="form" style="display: none;">
+        <form id="signupFormElement">
+            <h1>Signup</h1>
+            <input type="text" name="username" id="signupUsername" placeholder="Username" required><br>
+            <input type="email" name="email" id="signupEmail" placeholder="Email" required><br>
+            <input type="password" name="password" id="signupPassword" placeholder="Password" required><br>
+            <button id="signupButton" type="submit">Signup</button>
+            <div id="signupError" class="error"></div>
+        </form>
+    </div>
+
+    <div id="forgotPasswordForm" class="form" style="display: none;">
+        <form id="forgotPasswordFormElement">
+            <h1>Forgot Password</h1>
+            <input type="email" name="email" id="forgotPasswordEmail" placeholder="Email" required><br>
+            <button type="submit">Reset Password</button>
+            <div id="forgotPasswordError" class="error"></div>
+        </form>
+    </div>
+
+    <script src="script/login.js"></script>
+</body>
+</html>
