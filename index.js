@@ -176,12 +176,9 @@ app.post('/login', async (req, res) => {
 
     try {
         // Find user by username / email
-        let user = await User.findOne({ username });
+        let user = await User.findOne({ $or: [{ username }, { email: username }] });
         if (!user) {
-            user = await User.findOne({ email: username })
-            if (!user) {
-                return res.status(401).json({'message': 'Invalid credentials'});
-            }
+            return res.status(401).json({'message': 'Invalid credentials'});
         }
 
         // Compare hashed passwords
