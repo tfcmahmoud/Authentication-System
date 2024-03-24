@@ -9,6 +9,7 @@ const fs = require('fs')
 const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const jsonConfig = require('./config.json')
+const mongoSchema = require('./Schema/Users')
 
 // Middleware
 app.use(express.json());
@@ -23,16 +24,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Define user schema and model
-const userSchema = new mongoose.Schema({
-    username: { type: String, unique: true, required: true },
-    email: { type: String, unique: true, required: true },
-    password: { type: String, required: true },
-    resetPasswordToken: { type: String },
-    resetPasswordExpires: { type: Date, default: Date.now, expires: '1h' }, // Token expires in 1 hour
-    emailVerificationToken: { type: String },
-    emailVerified: { type: Boolean, default: false },
-    accountToken: { type: String } // New field to store account token
-});
+const userSchema = mongoSchema.userSchema
 
 // Hash password before saving
 userSchema.pre('save', async function (next) {
