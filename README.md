@@ -1,6 +1,6 @@
-# 🌟 User Authentication and Account Management API 🚀
+# 🌟 User Authentication and Account Management System 🚀
 
-This documentation provides information about setting up and using the User Authentication and Account Management API, which allows users to sign up, log in, verify their email, reset their password, and manage their accounts.
+This documentation provides information about setting up and using the User Authentication and Account Management System, which allows users to sign up, log in, verify their email, reset their password, and manage their accounts.
 
 ## Setup Instructions
 
@@ -18,9 +18,9 @@ This documentation provides information about setting up and using the User Auth
     ```
 3. Set up your MongoDB Atlas cluster and obtain the connection URI.
 4. Configure your SMTP service (e.g., Gmail) for sending emails.
-5. Update the following configurations in the `index.js` file:
+5. Update the following configurations in the `config.json` file:
    - MongoDB connection URI
-   - SMTP service settings (host, port, username, app password)
+   - SMTP service settings (host, port, username, password)
    - Server Port
 6. Start the server:
     ```
@@ -28,7 +28,7 @@ This documentation provides information about setting up and using the User Auth
     ```
 7. Your server should now be running on the specified port (default is 3000).
 
-## API Endpoints
+## Endpoints
 
 ### 1. Sign Up
 - **Endpoint:** `/signup`
@@ -82,7 +82,7 @@ This documentation provides information about setting up and using the User Auth
 - Certificate validation is disabled for the SMTP service connection (for Gmail) to avoid potential issues.
 
 ## Error Handling
-- The API provides appropriate error responses for various scenarios such as invalid credentials, expired tokens, internal server errors, etc.
+- The system provides appropriate error responses for various scenarios such as invalid credentials, expired tokens, internal server errors, etc.
 
 ## Conclusion
-This API provides robust user authentication and account management features for web applications. It ensures security, reliability, and a smooth user experience.
+This system provides robust user authentication and account management features for websites. It ensures security, reliability, and a smooth user experience. You can integrate these functionalities into your website to enable user registration, authentication, and password management.
