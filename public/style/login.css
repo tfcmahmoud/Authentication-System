@@ -52,6 +52,10 @@ nav ul li a:hover {
     transition: background-color 0.3s; /* Add transition for hover effect */
 }
 
+nav ul li a.active:hover {
+    background-color: #45a049;
+}
+
 .navbar-text {
     font-family: "Tauri", sans-serif;
     font-size: 24px; /* Adjust font size as needed */
