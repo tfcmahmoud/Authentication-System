@@ -85,4 +85,4 @@ This documentation provides information about setting up and using the User Auth
 - The API provides appropriate error responses for various scenarios such as invalid credentials, expired tokens, internal server errors, etc.
 
 ## Conclusion
-This API provides robust user authentication and account management features for web applications. It ensures security, reliability, and a smooth user experience. You can integrate these endpoints into your application to enable user registration, authentication, and password management functionalities.
+This API provides robust user authentication and account management features for web applications. It ensures security, reliability, and a smooth user experience.
