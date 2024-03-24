@@ -183,10 +183,13 @@ app.post('/login', async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        // Find user by username
-        const user = await User.findOne({ username });
+        // Find user by username / email
+        let user = await User.findOne({ username });
         if (!user) {
-            return res.status(401).json({'message': 'Invalid credentials'});
+            user = await User.findOne({ email: username })
+            if (!user) {
+                return res.status(401).json({'message': 'Invalid credentials'});
+            }
         }
 
         // Compare hashed passwords
